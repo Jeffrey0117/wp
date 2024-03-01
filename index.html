@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./index.css" rel="stylesheet" />
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+        font-family: Microsoft JhengHei;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .namecard {
+          /* Adjust styles for smaller screens here */
+          width: 100%; /* Example: Make the namecard full width on smaller screens */
+        }
+      }
+
+      .body {
+        position: relative;
+      }
+
+      .keyboard {
+        position: relative;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, 15%);
+        opacity: 0.68;
+      }
+
+      .namecard {
+        position: absolute;
+        left: 10%;
+        margin: 0 auto;
+        width: 470px;
+        height: 280px;
+        background-color: rgba(10, 40, 70, 0.78);
+        border: solid 1px #eee;
+        border-radius: 15px;
+        margin-top: -600px;
+        margin-left: 300px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: solid 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        text-shadow: 2px 3px 30px white;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+      }
+
+      .namecard h2 {
+        margin: auto;
+        display: inline-block;
+        font-size: 25px;
+        margin-left: 10px;
+      }
+
+      .namecard h4 {
+        display: inline;
+        margin-left: 20px;
+      }
+
+      .namecard p {
+        font-size: 18px;
+        padding-top: 25px;
+        margin-left: 20px;
+        line-height: 34px;
+        font-weight: 400;
+      }
+
+      .name {
+        font-size: 25px;
+        font-weight: 700;
+      }
+
+      .note {
+        font-size: 15px;
+        margin-left: 50px;
+      }
+
+      .logo {
+        width: 45px;
+      }
+
+      .barcode {
+        display: block;
+        width: 60%;
+        height: 10%;
+        opacity: 0.55;
+      }
+
+      .pic {
+        display: block;
+        position: absolute;
+        right: 20px;
+        width: 30%;
+        bottom: 50px;
+      }
+
+      .mark {
+        background-color: #e0e0e0;
+        font-size: 250px;
+        position: absolute;
+        top: 50px;
+        letter-spacing: 40px;
+        font-weight: 100;
+        color: rgba(0, 0, 0, 0.1);
+      }
+
+      .circle {
+        position: absolute;
+        border-radius: 100%;
+        border: solid 3px black;
+        height: 40px;
+        width: 40px;
+        right: 170px;
+        top: 90px;
+      }
+
+      .one {
+        position: absolute;
+        top: 5;
+        font-size: 22px;
+        padding-top: 0px;
+        padding-left: 10px;
+        line-height: 17px;
+      }
+
+      .intro {
+        margin-top: -80px;
+        margin-left: 20%;
+        font-size: 20px;
+        padding: 20px;
+        font-weight: 300;
+        color: white;
+        line-height: 25px;
+        text-shadow: 2px 2px 15px red;
+        background-color: rgba(6, 77, 33, 0.7);
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mark">前端工程師</div>
+    <img
+      class="keyboard"
+      src="https://asset.msi.com/resize/image/global/product/product_0_20180328134647_5abb2c4762138.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+    />
+
+    <div class="namecard">
+      <div class="title">
+        <img
+          class="logo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAACqCAMAAABVlWm8AAAAh1BMVEX+AAAAAJX///9+AEttbcIWFp7T0+1ra8FmZr8HB5h3d8YzM6rs7Peqqtz7+/3X1+5VVbj19fuhodghIaNERLGZmdVZWbovL6knJ6Xf3/IaGqDPz+uKis5PT7aAgMq7u+Oyst/m5vWOjtDBweV9fck5Oa2lpdpgYL2wsN5GRrLw8Pk2Nqu4uOEgMJcUAAADSklEQVR4nO2bW3eqMBBGmznSggj1hoKgtdqL9fj/f98ZokjweGP1oU3m2y8Fq6y1BwjDTPKgfpY/Dz8M/OEPf/jDH/7whz/8WxEI9+9+MwC2+6/Hov2DeCHa/4tyWf6B39hdUeyZ+97EcX+17ph7j0R9U/+x7XBgnf8bGQHwiCgx9QdtHwfW+b+TEYAJ+2eGPu3aHs46f7U1AjBkfxrV+tR1339DdQBeS3+/1qep+/5PdAxAWm5SVOv3Wh/NPv+9tA5AR2/2jvr0IcBfZccALPUWhZU+fUrwH9IhAMEyeet2i8iv9GkmwX+yv+pXRuI3X+vPntsfzAr/aTPHLe07ZaIzG3/6fj8sN8Mdf7pq/Cq8Jxeywt97zJJ+bZPTkAOSFs/7i54Guwn/c/5K8+NXRn7U65w7lJX++v6O80W43yt4mEs3ZPL6xF9a70MUzJOMzCzRfv9qgOtFPmd7fPK7MZ2Qp2UtLAi7L3H9gHTG/zjC8yDHoptTe2bLr37FoNp7uvO4tvjXAeDn3ssZfb5BvpSXHb/kmn8VgKVSH2f1eRyclm+Hbc6+Tf77AAxGyr+gz7dGoJJ2+jb56wCslLe96E8LNYtbXPyW+XMA4plaXdangccXQIuzb5m/8hIVDK748wXw3krfMn9+xH9e0zeKYU76p4GKrvpTqqatSqD2+Hv9JNseSl6X8Tk1zIvx3TGwwz/4KvLSLlfBdX0q1Lz8s934o9uHtcOfU/pqzHtRoxv+wyoF4neiyL9dD/n1/v1nw26ppjf8IxUae3FyKwK/3l/6+deIvv8PSB7/K1JP7vNfIzz/E57/C3//E/7+f1f9RzfHnKz/HOp/O6H1P+H1X6P+P71Y/w+crf/f0f8ZOdz/Oen/+ZwJNvPAjD+aVf2/8cqx/t9//d+PZv93qfu/PWf7v2f6/3reu6f7/zrh/+ty/79JNf/DeLnvuz3/o4k5/2chcP6P8Plf0uf/SZ//KX3+r/D539Ln/0tf/yF8/Y/49V9NxK3/O0H6+k/p63/Fr/+Wvv7/u8Af/vCHP/zhD3/4wx8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3OAfTQhUs3YbOsYAAAAASUVORK5CYII="
+          alt="logo"
+        />
+        <h2>Front-End Egineer</h2>
+        <h4>【碼農証】</h4>
+      </div>
+      <p>
+        出生國家 中華民國<br />
+        氏名 <span class="name">姚均達</span><br />
+        3月20日 生<br />
+        <br />
+        <span class="note">擅長的技能copy+paste</span><br />
+        <span class="note">stackoverflow就是我的藝術</span>
+      </p>
+      <img
+        class="barcode"
+        src="https://i.imgur.com/nvLDfOS.png"
+        alt="barcode"
+      />
+      <img
+        class="pic"
+        src="https://i.imgur.com/fLaehWI.jpg"
+        alt="いたどりゆうじ"
+      />
+      <div class="circle">
+        <span class="one">一<br />級</span>
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>平常喜歡前端的知識，練習寫網頁，也很樂於助人</p>
+      <p>如果有不會的問題都可以問我，我認為交朋友是人生最大的資產</p>
+
+      <p>想當前端工程師、去貓咪咖啡廳摸貓、假日河畔看電影逛街</p>
+      <p>放假則跑去台南高雄曬太陽，練拳擊</p>
+      <p>上面是我的夢想，希望找到志同道合的夥伴未來一起發大財🚀🚀🚀</p>
+    </div>
+  </body>
+  <script type="module" src="/dist/index.js"></script>
+</html>
